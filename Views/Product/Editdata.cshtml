@@ -1,0 +1,44 @@
+@model Mendata.Net.Models.Entities.Barang
+@{
+    ViewData["Title"] = "Edit Data";
+}
+
+<h1 style="text-align:center;">@ViewData["Title"] </h1>
+
+<form action="Editdata" method="post">
+
+    <div class="mb-3">
+        <label for="" class="form-label">Kode Produk</label>
+        <input class="form-control" id="Kode" asp-for="Kode" value="@Model.Kode">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Nama Produk</label>
+        <input class="form-control" id="Nama" asp-for="Nama" value="@Model.Nama">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Harga Produk</label>
+        <input class="form-control" id="Harga" asp-for="Harga" value="@Model.Harga">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Banyak Stok</label>
+        <input class="form-control" id="Stok" asp-for="Stok" value="@Model.Stok"> </input>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Deskripsi Produk</label>
+        <textarea class="form-control" id="description" asp-for="Description" value="@Model.Description"> </textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Upload Foto Produk</label>
+        <input type="file" class="form-control" id="imgname" asp-for="FileName"> </input>
+    </div>
+
+    <input type="hidden" asp-for="Id"></input>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>

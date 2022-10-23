@@ -1,0 +1,38 @@
+@model Mendata.Net.Models.RequestBarang
+
+@{
+    ViewData["Title"] = "Input Data Produk";
+}
+
+<h1 style="text-align:center;">@ViewData["Title"] </h1>
+
+<form asp-action="InputData" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="" class="form-label">Kode Produk</label>
+        <input class="form-control" id="Kodeproduk" asp-for="Kode">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Nama Produk</label>
+        <input class="form-control" id="NamaProduk" asp-for="Nama">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Harga Produk</label>
+        <input class="form-control" id="hargaproduk" asp-for="Harga">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Banyak Stok</label>
+        <input class="form-control" id="stok" asp-for="Stok"> </input>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Deskripsi Produk</label>
+        <textarea class="form-control" id="deskripsiproduk" asp-for="Description"> </textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Upload Foto Produk</label>
+        <input type="file" class="form-control" id="imgname" asp-for="imgname"></input>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">Back</a>
+</form>
